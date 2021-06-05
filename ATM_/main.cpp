@@ -5,9 +5,13 @@
 
 #include "atm.cpp"
 #include <string>
+#include <iostream>
 
 int main(){
     ATM myATM;
+    myATM.deposit(90000);
+    
+    std::cout << myATM.getBalance() << std::endl;
     
     return 0;
 }

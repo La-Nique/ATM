@@ -9,7 +9,9 @@ Description  : Header file for the ATM class
 #include <string>
 class ATM{
     public:
-
+        ATM();
+        ATM(int amount);
+    
         /**
         * @ param  None
         * @return The user's balance amount
@@ -65,9 +67,10 @@ class ATM{
         std::string getTransactionString();
         
         int amount;
+        int accountBalance;
         std::string displayTransactions;
         
     private:
-        int accountBalance;
+        
 };
 #endif

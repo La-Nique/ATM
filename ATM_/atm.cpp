@@ -5,7 +5,10 @@ Description  : Implementation file for the ATM class
 ****************************************************************************************************************************/
 
 #include "atm.h"
-
+ATM::ATM()
+{
+  accountBalance = 0;
+}
 int ATM::getBalance() /// no parameters; return user's balance amount
 {
     return accountBalance;
@@ -13,16 +16,12 @@ int ATM::getBalance() /// no parameters; return user's balance amount
 
 int ATM::deposit(int amount) /// parameter: 'amount', the amount the user wants to deposit into their balance; return user's balance amount
 {
-    if(amount <= accountBalance)
-    {
-        accountBalance = accountBalance + amount;
-    }
-    return accountBalance;
+    return accountBalance + amount;
 }
 
 int ATM::withdraw(int amount) /// parameter: 'amount', the amount the user wants to withdraw from their balance;
 {
-    if(amount<=accountBalance)
+    if(amount <= accountBalance)
     {
         accountBalance = accountBalance - amount;
         return accountBalance; /// return The balance in the user's account if the withdrawal amount is valid;
