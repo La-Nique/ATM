@@ -1,14 +1,13 @@
-//
-//  main.cpp
-//  ATM_
-//
-//  Created by ピタソン・ラニク on 6/4/21.
-//
+// Lanique Peterson
+// Test file.
+// To compile via terminal run: g++ main.cpp -std=c++11
+// To execute your binary run the: ./a.out
 
-#include <iostream>
+#include "atm.cpp"
+#include <string>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main(){
+    ATM myATM;
+    
     return 0;
 }

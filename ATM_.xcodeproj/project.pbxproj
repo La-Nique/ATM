@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		715C1D11266B2B410012AEE1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C1D10266B2B410012AEE1 /* main.cpp */; };
+		715C1D1C266B2B650012AEE1 /* atm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C1D19266B2B640012AEE1 /* atm.cpp */; };
+		715C1D1D266B2B650012AEE1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715C1D1B266B2B650012AEE1 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		715C1D0D266B2B410012AEE1 /* ATM_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ATM_; sourceTree = BUILT_PRODUCTS_DIR; };
-		715C1D10266B2B410012AEE1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		715C1D0D266B2B410012AEE1 /* ATM_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = ATM_; path = "/Users/pitasonraniku/Desktop/CS 235/ProjectFiles/Project1_ATM/ATM_/build/Debug/ATM_"; sourceTree = "<absolute>"; };
+		715C1D19266B2B640012AEE1 /* atm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atm.cpp; sourceTree = "<group>"; };
+		715C1D1A266B2B640012AEE1 /* atm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atm.h; sourceTree = "<group>"; };
+		715C1D1B266B2B650012AEE1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,22 +45,15 @@
 			isa = PBXGroup;
 			children = (
 				715C1D0F266B2B410012AEE1 /* ATM_ */,
-				715C1D0E266B2B410012AEE1 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		715C1D0E266B2B410012AEE1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				715C1D0D266B2B410012AEE1 /* ATM_ */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		715C1D0F266B2B410012AEE1 /* ATM_ */ = {
 			isa = PBXGroup;
 			children = (
-				715C1D10266B2B410012AEE1 /* main.cpp */,
+				715C1D19266B2B640012AEE1 /* atm.cpp */,
+				715C1D1A266B2B640012AEE1 /* atm.h */,
+				715C1D1B266B2B650012AEE1 /* main.cpp */,
 			);
 			path = ATM_;
 			sourceTree = "<group>";
@@ -104,7 +100,7 @@
 				Base,
 			);
 			mainGroup = 715C1D04266B2B410012AEE1;
-			productRefGroup = 715C1D0E266B2B410012AEE1 /* Products */;
+			productRefGroup = 715C1D04266B2B410012AEE1;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -118,7 +114,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				715C1D11266B2B410012AEE1 /* main.cpp in Sources */,
+				715C1D1D266B2B650012AEE1 /* main.cpp in Sources */,
+				715C1D1C266B2B650012AEE1 /* atm.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
