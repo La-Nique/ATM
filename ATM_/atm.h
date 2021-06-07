@@ -9,8 +9,8 @@ Description  : Header file for the ATM class
 #include <string>
 class ATM{
     public:
-//        ATM();
-//        ATM(int amount);
+        /// required to intialize new objects
+        ATM();
     
         /**
         * @ param  None

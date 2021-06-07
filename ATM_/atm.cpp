@@ -5,10 +5,10 @@ Description  : Implementation file for the ATM class
 ****************************************************************************************************************************/
 
 #include "atm.h"
-//ATM::ATM()
-//{
-//  
-//}
+ATM::ATM()
+{
+    accountBalance = 0; /// all new bank accounts start with zero dollars in their bank accounts
+}
 int ATM::getBalance() /// no parameters; return user's balance amount
 {
     return accountBalance;
