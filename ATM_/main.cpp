@@ -7,11 +7,18 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
 int main(){
     ATM myATM;
-    myATM.deposit(90000);
+    int amount;
     
-    std::cout << myATM.getBalance() << std::endl;
+    cout << "I want to deposit: " << endl;
+    cin >> amount;
+    
+    myATM.deposit(amount);
+    
+    cout << "My current balance is now: " << endl << myATM.getBalance() << endl;
     
     return 0;
 }

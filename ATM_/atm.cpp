@@ -5,26 +5,27 @@ Description  : Implementation file for the ATM class
 ****************************************************************************************************************************/
 
 #include "atm.h"
-ATM::ATM()
-{
-  accountBalance = 0;
-}
+//ATM::ATM()
+//{
+//  
+//}
 int ATM::getBalance() /// no parameters; return user's balance amount
 {
     return accountBalance;
 }
 
-int ATM::deposit(int amount) /// parameter: 'amount', the amount the user wants to deposit into their balance; return user's balance amount
+int ATM::deposit(int amount) /// will add amount of money and return the new total in bank account
 {
-    return accountBalance + amount;
+    accountBalance = accountBalance + amount;
+    return accountBalance;
 }
 
-int ATM::withdraw(int amount) /// parameter: 'amount', the amount the user wants to withdraw from their balance;
+int ATM::withdraw(int amount) /// will subtract amount of money and return the new total in bank account
 {
-    if(amount <= accountBalance)
+    if(accountBalance >= amount)
     {
-        accountBalance = accountBalance - amount;
-        return accountBalance; /// return The balance in the user's account if the withdrawal amount is valid;
+        accountBalance = accountBalance - amount; /// return The balance in the user's account if the withdrawal amount is valid;
+        return accountBalance;
     }
     else
     {
@@ -57,7 +58,7 @@ std::string ATM::getTransactionString()
      *       + 100
      *       + 200
      *       - 100
-     *       Current Balance: 100
+     *       Current Balance: 200
      *       Invalid Withdrawal Amount: 1000
      *
      *       NOTE: The last character of your string should be a new line unless you find no transactions
