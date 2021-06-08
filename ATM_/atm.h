@@ -7,6 +7,7 @@ Description  : Header file for the ATM class
 #define ATM_H
 
 #include <string>
+#include <vector>
 class ATM{
     public:
         /// required to intialize new objects
@@ -68,6 +69,10 @@ class ATM{
         
     private:
         int accountBalance;
-        std::string displayTransactions;
+        int counter;
+        std::string depositAmount;
+        std::string withdrawAmount;
+        int invaildAmount;
+        std::vector<std::string> displayTransactions;
 };
 #endif

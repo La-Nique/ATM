@@ -4,10 +4,16 @@ Author       : Lanique Peterson
 Description  : Implementation file for the ATM class
 ****************************************************************************************************************************/
 
+#include <iostream>
+#include <vector>
+#include <string>
 #include "atm.h"
-ATM::ATM()
+ATM::ATM() /// our default constructor
 {
     accountBalance = 0; /// all new bank accounts start with zero dollars in their bank accounts
+    depositAmount = "";
+    withdrawAmount = "";
+    invaildAmount = 0;
 }
 int ATM::getBalance() /// no parameters; return user's balance amount
 {
@@ -16,6 +22,9 @@ int ATM::getBalance() /// no parameters; return user's balance amount
 
 int ATM::deposit(int amount) /// will add amount of money and return the new total in bank account
 {
+    counter++;
+    //depositAmount = "+ " + std::to_string(amount);
+    displayTransactions.push_back("+ " + std::to_string(amount));
     accountBalance = accountBalance + amount;
     return accountBalance;
 }
@@ -24,11 +33,15 @@ int ATM::withdraw(int amount) /// will subtract amount of money and return the n
 {
     if(accountBalance >= amount)
     {
+        counter++;
+        //withdrawAmount = "- " + std::to_string(amount);
+        displayTransactions.push_back("- " + std::to_string(amount));
         accountBalance = accountBalance - amount; /// return The balance in the user's account if the withdrawal amount is valid;
         return accountBalance;
     }
     else
     {
+        invaildAmount = invaildAmount + amount;
         return -1; /// else Return a -1 if the withdrawal amount is invalid without changing the user's balance;
     }
 }
@@ -63,9 +76,19 @@ std::string ATM::getTransactionString()
      *
      *       NOTE: The last character of your string should be a new line unless you find no transactions
      *
-     * @param  None
-     * @return A String that displays all transactions on their own line
+     * @ param  None
+     * @ return A String that displays all transactions on their own line
      */
-    return displayTransactions;
+        // Print Strings stored in Vector
+    for (int i = 0; i < displayTransactions.size(); i++)
+    std::cout << displayTransactions[i] << "\n";
+    
+    std::cout << "Current Balance: " << getBalance() << std::endl;
+    std::cout << "Invalid Withdrawal Amount: " << invaildAmount << std::endl;
+    
+    std::string s;
+    for (const auto &piece : displayTransactions) s += piece;
+    
+    return s;
 }
 

@@ -20,12 +20,15 @@ int main(){
     
     cout << "My current balance is now: " << endl << myATM.getBalance() << endl;
     
-    cout << "I want to withdrawl: " << endl;
+    cout << "I want to withdraw: " << endl;
     cin >> amount;
     
     myATM.withdraw(amount);
     
     cout << "My current balance is now: " << endl << myATM.getBalance() << endl;
+    cout << "-------- getTransactionString() -------- " << endl;
+    
+    myATM.getTransactionString();
     
     return 0;
 }
