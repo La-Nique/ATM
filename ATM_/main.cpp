@@ -1,13 +1,13 @@
 // Lanique Peterson
 // Test file.
 // To compile via terminal run: g++ main.cpp -std=c++11
-// To execute your binary run the: ./a.out
-
-#include "atm.cpp"
-#include <string>
-#include <iostream>
+// To execute the binary run the: ./a.out
 
 using namespace std;
+#include "atm.cpp"
+
+#include <string>
+#include <iostream>
 
 int main(){
     ATM myATM;
@@ -32,5 +32,5 @@ int main(){
     
     cout << myATM.allTransactions;
     
-    return 0;
+return 0;
 }

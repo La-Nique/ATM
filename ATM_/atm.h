@@ -6,33 +6,29 @@ Description  : Header file for the ATM class
 #ifndef ATM_H
 #define ATM_H
 
-#include <string>
-#include <vector>
 class ATM{
     public:
-        /// required to intialize new objects
-        ATM();
+        ATM(); ///used to intialize new objects
     
         /**
         * @ param  None
         * @return The user's balance amount
         */
-        int getBalance(); // returns the total amount in bank account.
+        int getBalance();
 
         /**
         * @param  amount The amount the user wants to deposit into their balance.
         *                Assume we will accept any amount that fits within an INT
         * @return The user's balance amount
         */
-        int deposit(int amount); // will add amount of money and return the new total in bank account
+        int deposit(int amount);
 
         /**
         * @param  amount The amount the user wants to withdraw from their balance.
         * @return The balance in the user's account if the withdrawal amount is valid
         *         Return a -1 if the withdrawal amount is invalid without changing the user's balance
         */
-        int withdraw(int amount); // will subtract amount of money and return the new total in bank account
-        
+        int withdraw(int amount);
 
         /**
         * This function return a string with all transactions (Withdrawals/Deposits) on seperate lines
@@ -66,15 +62,13 @@ class ATM{
         * @return A String that displays all transactions on their own line
         */
         std::string getTransactionString();
-        std::string allTransactions;
-        
+    
     private:
         int accountBalance;
-        //int counter;
         std::string depositAmount;
         std::string withdrawAmount;
         int invaildAmount;
-        //std::vector<std::string> displayTransactions;
+        std::string allTransactions;
         
 };
 #endif

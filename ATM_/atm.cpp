@@ -5,12 +5,10 @@ Description  : Implementation file for the ATM class
 ****************************************************************************************************************************/
 
 #include <iostream>
-#include <vector>
-#include <string>
 #include "atm.h"
 ATM::ATM() /// our default constructor
 {
-    accountBalance = 0; /// all new bank accounts start with zero dollars in their bank accounts
+    accountBalance = 0; /// all new bank accounts/objects will start with zero dollars in their bank accounts
     depositAmount = "";
     withdrawAmount = "";
     invaildAmount = 0;
@@ -18,15 +16,13 @@ ATM::ATM() /// our default constructor
 }
 int ATM::getBalance() /// no parameters; return user's balance amount
 {
-    allTransactions += "Current Balance: " + std::to_string(accountBalance) + "\n";
+    allTransactions += "Current Balance: " + std::to_string(accountBalance) + "\n"; ///appending to string as per instructions
     return accountBalance;
 }
 
 int ATM::deposit(int amount) /// will add amount of money and return the new total in bank account
 {
-    //counter++;
-    //displayTransactions.push_back("+ " + std::to_string(amount));
-    allTransactions += "+ " + std::to_string(amount) + "\n";
+    allTransactions += "+ " + std::to_string(amount) + "\n"; //casting int into a string type; append to string.
     accountBalance = accountBalance + amount;
     return accountBalance;
 }
@@ -35,9 +31,6 @@ int ATM::withdraw(int amount) /// will subtract amount of money and return the n
 {
     if(accountBalance >= amount)
     {
-        //counter++;
-        //withdrawAmount = "- " + std::to_string(amount);
-        //displayTransactions.push_back("- " + std::to_string(amount));
         allTransactions += "- " + std::to_string(amount) + "\n";
         accountBalance = accountBalance - amount; /// return The balance in the user's account if the withdrawal amount is valid;
         return accountBalance;
@@ -52,16 +45,6 @@ int ATM::withdraw(int amount) /// will subtract amount of money and return the n
 
 std::string ATM::getTransactionString()
 {
-//    for (int i = 0; i < displayTransactions.size(); i++)
-//        std::cout << displayTransactions[i] << "\n";
-//
-//    std::cout << "Current Balance: " << getBalance() << std::endl;
-//    std::cout << "Invalid Withdrawal Amount: " << invaildAmount << std::endl;
-    
-    
-//    allTransactions += "Current Balance: " + std::to_string(getBalance()) + "\n";
-//    allTransactions += "Invalid Withdrawal Amount: " + std::to_string(invaildAmount) + "\n";
-    
     return allTransactions;
 }
 
