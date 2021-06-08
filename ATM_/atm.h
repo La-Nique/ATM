@@ -63,12 +63,16 @@ class ATM{
         */
         std::string getTransactionString();
     
+        std::string allTransactions;
+    
     private:
         int accountBalance;
         std::string depositAmount;
         std::string withdrawAmount;
         int invaildAmount;
-        std::string allTransactions;
         
+        /// FINAL GRADE: 20/20
 };
 #endif
+
+

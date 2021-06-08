@@ -2,12 +2,12 @@
 // Test file.
 // To compile via terminal run: g++ main.cpp -std=c++11
 // To execute the binary run the: ./a.out
-
-using namespace std;
 #include "atm.cpp"
 
 #include <string>
 #include <iostream>
+
+using namespace std;
 
 int main(){
     ATM myATM;

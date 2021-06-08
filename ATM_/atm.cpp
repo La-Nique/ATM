@@ -3,9 +3,9 @@ Title        : atm.cpp
 Author       : Lanique Peterson
 Description  : Implementation file for the ATM class
 ****************************************************************************************************************************/
-
 #include <iostream>
 #include "atm.h"
+
 ATM::ATM() /// our default constructor
 {
     accountBalance = 0; /// all new bank accounts/objects will start with zero dollars in their bank accounts
@@ -16,7 +16,7 @@ ATM::ATM() /// our default constructor
 }
 int ATM::getBalance() /// no parameters; return user's balance amount
 {
-    allTransactions += "Current Balance: " + std::to_string(accountBalance) + "\n"; ///appending to string as per instructions
+    allTransactions += "Current Balance: " + std::to_string(accountBalance) + "\n"; ///appending to string as per desired instructions, but the output is not pretty, follow 'AMT_NOTES' folder files' for correct prettier program using a vector type string.
     return accountBalance;
 }
 
@@ -37,7 +37,7 @@ int ATM::withdraw(int amount) /// will subtract amount of money and return the n
     }
     else
     {
-        invaildAmount = invaildAmount + amount;
+        invaildAmount += invaildAmount;
         allTransactions += "Invalid Withdrawal Amount: " + std::to_string(invaildAmount + amount) + "\n";
         return -1; /// else Return a -1 if the withdrawal amount is invalid without changing the user's balance;
     }
@@ -48,3 +48,4 @@ std::string ATM::getTransactionString()
     return allTransactions;
 }
 
+/// FINAL GRADE: 20/20
