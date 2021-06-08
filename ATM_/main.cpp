@@ -30,5 +30,7 @@ int main(){
     
     myATM.getTransactionString();
     
+    cout << myATM.allTransactions;
+    
     return 0;
 }

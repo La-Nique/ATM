@@ -66,13 +66,15 @@ class ATM{
         * @return A String that displays all transactions on their own line
         */
         std::string getTransactionString();
+        std::string allTransactions;
         
     private:
         int accountBalance;
-        int counter;
+        //int counter;
         std::string depositAmount;
         std::string withdrawAmount;
         int invaildAmount;
-        std::vector<std::string> displayTransactions;
+        //std::vector<std::string> displayTransactions;
+        
 };
 #endif
